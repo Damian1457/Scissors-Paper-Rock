@@ -56,7 +56,7 @@ public class Airport {
         return "Airport{" + "name='" + name + '\'' + ", numberOfMilitaryPlanes=" + numberOfMilitaryPlanes + ", numberOfPassengerPlanes=" + numberOfPassengerPlanes + ", thePlaneList=" + thePlaneList + '}';
     }
 
-    public boolean addPlanes(PlanesList planesList, Plane plane) {
+    public boolean addPlane(Plane plane) {
         if (plane.getClass().getName().equals("MilitaryPlane")) {
             numberOfMilitaryPlanes++;
         } else if (plane.getClass().getName().equals("PassengerPlane")) {

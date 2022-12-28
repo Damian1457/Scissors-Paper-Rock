@@ -2,8 +2,6 @@ package com.example.tutoring.classes.view;
 
 import com.example.tutoring.classes.Airport;
 import com.example.tutoring.classes.MilitaryPlane;
-import com.example.tutoring.classes.Plane;
-import com.example.tutoring.classes.PlanesList;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -73,9 +71,8 @@ public class UserInterface extends Frame {
                 String password = passwordField.getText();
 
                 if (userName.equals("Damian") && password.equals("Damian")) {
-                    PlanesList planesList = new PlanesList();
                     Airport airport = new Airport("Warsaw");
-                    //airport.addPlanes(new MilitaryPlane(""));
+                    airport.addPlane(new MilitaryPlane("F30", 100, 1400.00, true));
                     List<String> list = airport.playnsDisplay();
                     for (String plane : list) {
                         System.out.println(plane);
